@@ -47,7 +47,7 @@ struct iio_channel_info {
 };
 
 #define _IIO_GETU(__data, __idx, __size, __shift) \
-    (((guint##__size) (((const guint8 *) (__data))[__idx])) << (__shift))
+    (((gint##__size) (((const gint8 *) (__data))[__idx])) << (__shift))
 
 #define _IIO_READ_UINT32_BE(data)       (_IIO_GETU (data, 0, 32, 24) | \
                                          _IIO_GETU (data, 1, 32, 16) | \
